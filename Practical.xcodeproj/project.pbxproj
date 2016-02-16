@@ -15,6 +15,8 @@
 		1045826A1C733A6E00565C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104582681C733A6E00565C1F /* LaunchScreen.storyboard */; };
 		104582751C733A6E00565C1F /* PracticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104582741C733A6E00565C1F /* PracticalTests.swift */; };
 		104582801C733A6E00565C1F /* PracticalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045827F1C733A6E00565C1F /* PracticalUITests.swift */; };
+		1045828F1C733BE900565C1F /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1045828E1C733BE900565C1F /* Decodable.framework */; };
+		104582911C733CEA00565C1F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104582901C733CEA00565C1F /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1045827B1C733A6E00565C1F /* PracticalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1045827F1C733A6E00565C1F /* PracticalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalUITests.swift; sourceTree = "<group>"; };
 		104582811C733A6F00565C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1045828E1C733BE900565C1F /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/iOS/Decodable.framework; sourceTree = "<group>"; };
+		104582901C733CEA00565C1F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1045828F1C733BE900565C1F /* Decodable.framework in Frameworks */,
+				104582911C733CEA00565C1F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,7 @@
 				1045825C1C733A6E00565C1F /* Practical */,
 				104582731C733A6E00565C1F /* PracticalTests */,
 				1045827E1C733A6E00565C1F /* PracticalUITests */,
+				104582921C733D1200565C1F /* Frameworks */,
 				1045825B1C733A6E00565C1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +135,15 @@
 			path = PracticalUITests;
 			sourceTree = "<group>";
 		};
+		104582921C733D1200565C1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				104582901C733CEA00565C1F /* Alamofire.framework */,
+				1045828E1C733BE900565C1F /* Decodable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +154,7 @@
 				104582561C733A6E00565C1F /* Sources */,
 				104582571C733A6E00565C1F /* Frameworks */,
 				104582581C733A6E00565C1F /* Resources */,
+				1045828D1C733B3000565C1F /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -253,6 +270,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1045828D1C733B3000565C1F /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Decodable.framework/",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		104582561C733A6E00565C1F /* Sources */ = {
@@ -403,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Practical/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterlafferty.Practical;
@@ -414,6 +453,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Practical/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterlafferty.Practical;
