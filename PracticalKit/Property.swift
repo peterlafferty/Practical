@@ -16,6 +16,7 @@ public struct Property {
     public let currency:String?
     public let rating: Int?
     public let type:String
+    public let image:[Image]
 }
 
 extension Property: Decodable {
@@ -32,7 +33,8 @@ extension Property: Decodable {
             price: try? j => "lowestPricePerNight" => "value",
             currency: try? j => "lowestPricePerNight" => "currency",
             rating: rating,
-            type: j => "type"
+            type: j => "type",
+            image: j => "images"
         )
     }
 }

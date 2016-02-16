@@ -88,11 +88,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xha-CN-iEy" userLabel="Name">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xha-CN-iEy" userLabel="Name">
                                             <rect key="frame" x="128" y="8" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="uNz-tt-hRt"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -112,6 +109,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzH-bF-lf5">
                                             <rect key="frame" x="8" y="8" width="112" height="102"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="3iz-ey-QJZ"/>
                                                 <constraint firstAttribute="width" constant="112" id="vMX-d4-ep0"/>
                                             </constraints>
                                         </imageView>
@@ -123,17 +121,18 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="top" secondItem="Xha-CN-iEy" secondAttribute="top" id="09y-V5-nNZ"/>
-                                        <constraint firstItem="nKR-oh-yly" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" symbolic="YES" id="36z-mS-nWP"/>
-                                        <constraint firstItem="Xha-CN-iEy" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="7vS-eJ-dJn"/>
-                                        <constraint firstItem="giq-hH-XOS" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" symbolic="YES" id="C3O-RG-0Ni"/>
-                                        <constraint firstItem="giq-hH-XOS" firstAttribute="top" secondItem="Xha-CN-iEy" secondAttribute="bottom" constant="8" id="KSp-Pj-x6g"/>
-                                        <constraint firstItem="gZS-qd-K8e" firstAttribute="leading" secondItem="nKR-oh-yly" secondAttribute="trailing" constant="8" id="N03-HJ-88s"/>
-                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="Udl-mS-vp3"/>
-                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="Uzo-BS-HNh"/>
-                                        <constraint firstItem="nKR-oh-yly" firstAttribute="top" secondItem="giq-hH-XOS" secondAttribute="bottom" constant="8" id="aoI-w9-rsE"/>
-                                        <constraint firstItem="Xha-CN-iEy" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" symbolic="YES" id="jcI-T8-AEm"/>
-                                        <constraint firstItem="gZS-qd-K8e" firstAttribute="top" secondItem="nKR-oh-yly" secondAttribute="top" id="nVB-Bl-xVJ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Xha-CN-iEy" secondAttribute="trailing" constant="8" id="1ro-WV-WMO"/>
+                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="2sU-4G-9Hc"/>
+                                        <constraint firstItem="Xha-CN-iEy" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="54T-Vr-AY9"/>
+                                        <constraint firstItem="Xha-CN-iEy" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" id="BYX-Ys-9SX"/>
+                                        <constraint firstItem="nKR-oh-yly" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" id="Ktf-UQ-a9X"/>
+                                        <constraint firstItem="gZS-qd-K8e" firstAttribute="top" secondItem="nKR-oh-yly" secondAttribute="top" id="Ma3-JA-Jxl"/>
+                                        <constraint firstItem="giq-hH-XOS" firstAttribute="top" secondItem="Xha-CN-iEy" secondAttribute="bottom" constant="8" id="VLb-Ss-aCm"/>
+                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="kLb-hf-iuM"/>
+                                        <constraint firstItem="gZS-qd-K8e" firstAttribute="leading" secondItem="nKR-oh-yly" secondAttribute="trailing" constant="8" id="kbk-b1-chg"/>
+                                        <constraint firstItem="bzH-bF-lf5" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="tw9-Nt-Wd7"/>
+                                        <constraint firstItem="nKR-oh-yly" firstAttribute="top" secondItem="giq-hH-XOS" secondAttribute="bottom" constant="8" id="w29-jI-Zee"/>
+                                        <constraint firstItem="giq-hH-XOS" firstAttribute="leading" secondItem="bzH-bF-lf5" secondAttribute="trailing" constant="8" id="y0I-dO-ziC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

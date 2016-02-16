@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100550DE1C73865800AD07C1 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */; };
+		100550E01C7394FF00AD07C1 /* PropertiesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */; };
+		100550E21C7399A300AD07C1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550E11C7399A300AD07C1 /* Image.swift */; };
 		1045825E1C733A6E00565C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825D1C733A6E00565C1F /* AppDelegate.swift */; };
-		104582601C733A6E00565C1F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825F1C733A6E00565C1F /* MasterViewController.swift */; };
-		104582621C733A6E00565C1F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104582611C733A6E00565C1F /* DetailViewController.swift */; };
+		104582601C733A6E00565C1F /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825F1C733A6E00565C1F /* PropertiesViewController.swift */; };
+		104582621C733A6E00565C1F /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104582611C733A6E00565C1F /* PropertyViewController.swift */; };
 		104582651C733A6E00565C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104582631C733A6E00565C1F /* Main.storyboard */; };
 		104582671C733A6E00565C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104582661C733A6E00565C1F /* Assets.xcassets */; };
 		1045826A1C733A6E00565C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104582681C733A6E00565C1F /* LaunchScreen.storyboard */; };
@@ -83,10 +86,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesDataSource.swift; sourceTree = "<group>"; };
+		100550E11C7399A300AD07C1 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		1045825A1C733A6E00565C1F /* Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1045825D1C733A6E00565C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1045825F1C733A6E00565C1F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		104582611C733A6E00565C1F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1045825F1C733A6E00565C1F /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
+		104582611C733A6E00565C1F /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
 		104582641C733A6E00565C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		104582661C733A6E00565C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		104582691C733A6E00565C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,12 +191,14 @@
 			isa = PBXGroup;
 			children = (
 				1045825D1C733A6E00565C1F /* AppDelegate.swift */,
-				1045825F1C733A6E00565C1F /* MasterViewController.swift */,
-				104582611C733A6E00565C1F /* DetailViewController.swift */,
+				1045825F1C733A6E00565C1F /* PropertiesViewController.swift */,
+				104582611C733A6E00565C1F /* PropertyViewController.swift */,
 				104582631C733A6E00565C1F /* Main.storyboard */,
 				104582661C733A6E00565C1F /* Assets.xcassets */,
 				104582681C733A6E00565C1F /* LaunchScreen.storyboard */,
 				1045826B1C733A6E00565C1F /* Info.plist */,
+				100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */,
+				100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */,
 			);
 			path = Practical;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 				104582BB1C7350DD00565C1F /* CitiesRepository.swift */,
 				104582BD1C73515E00565C1F /* ErrorTypes.swift */,
 				104582BF1C73641300565C1F /* Property.swift */,
+				100550E11C7399A300AD07C1 /* Image.swift */,
 			);
 			path = PracticalKit;
 			sourceTree = "<group>";
@@ -469,8 +478,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104582621C733A6E00565C1F /* DetailViewController.swift in Sources */,
-				104582601C733A6E00565C1F /* MasterViewController.swift in Sources */,
+				100550E01C7394FF00AD07C1 /* PropertiesDataSource.swift in Sources */,
+				104582621C733A6E00565C1F /* PropertyViewController.swift in Sources */,
+				104582601C733A6E00565C1F /* PropertiesViewController.swift in Sources */,
+				100550DE1C73865800AD07C1 /* PropertyTableViewCell.swift in Sources */,
 				1045825E1C733A6E00565C1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104582C01C73641300565C1F /* Property.swift in Sources */,
+				100550E21C7399A300AD07C1 /* Image.swift in Sources */,
 				104582B91C733E9F00565C1F /* Result.swift in Sources */,
 				104582B71C733E0400565C1F /* PropertiesRepository.swift in Sources */,
 				104582BE1C73515F00565C1F /* ErrorTypes.swift in Sources */,
@@ -814,6 +826,7 @@
 				104582861C733A6F00565C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104582871C733A6F00565C1F /* Build configuration list for PBXNativeTarget "PracticalTests" */ = {
 			isa = XCConfigurationList;
@@ -822,6 +835,7 @@
 				104582891C733A6F00565C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1045828A1C733A6F00565C1F /* Build configuration list for PBXNativeTarget "PracticalUITests" */ = {
 			isa = XCConfigurationList;
@@ -830,6 +844,7 @@
 				1045828C1C733A6F00565C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104582AF1C733DB300565C1F /* Build configuration list for PBXNativeTarget "PracticalKit" */ = {
 			isa = XCConfigurationList;
@@ -838,6 +853,7 @@
 				104582B11C733DB300565C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104582B31C733DB300565C1F /* Build configuration list for PBXNativeTarget "PracticalKitTests" */ = {
 			isa = XCConfigurationList;
@@ -846,6 +862,7 @@
 				104582B51C733DB300565C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
