@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Practical.xcscheme</key>
+		<key>Practical.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>PracticalKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>1045827A1C733A6E00565C1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>104582971C733DB300565C1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>104582A01C733DB300565C1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

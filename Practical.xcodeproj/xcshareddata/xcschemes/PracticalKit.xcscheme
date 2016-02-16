@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "104582591C733A6E00565C1F"
-               BuildableName = "Practical.app"
-               BlueprintName = "Practical"
+               BlueprintIdentifier = "104582971C733DB300565C1F"
+               BuildableName = "PracticalKit.framework"
+               BlueprintName = "PracticalKit"
                ReferencedContainer = "container:Practical.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,36 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1045826F1C733A6E00565C1F"
-               BuildableName = "PracticalTests.xctest"
-               BlueprintName = "PracticalTests"
-               ReferencedContainer = "container:Practical.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1045827A1C733A6E00565C1F"
-               BuildableName = "PracticalUITests.xctest"
-               BlueprintName = "PracticalUITests"
-               ReferencedContainer = "container:Practical.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "104582591C733A6E00565C1F"
-            BuildableName = "Practical.app"
-            BlueprintName = "Practical"
-            ReferencedContainer = "container:Practical.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -71,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "104582591C733A6E00565C1F"
-            BuildableName = "Practical.app"
-            BlueprintName = "Practical"
+            BlueprintIdentifier = "104582971C733DB300565C1F"
+            BuildableName = "PracticalKit.framework"
+            BlueprintName = "PracticalKit"
             ReferencedContainer = "container:Practical.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "104582591C733A6E00565C1F"
-            BuildableName = "Practical.app"
-            BlueprintName = "Practical"
+            BlueprintIdentifier = "104582971C733DB300565C1F"
+            BuildableName = "PracticalKit.framework"
+            BlueprintName = "PracticalKit"
             ReferencedContainer = "container:Practical.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
