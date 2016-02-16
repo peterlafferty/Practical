@@ -12,7 +12,9 @@ import Alamofire
 public struct PropertiesRepository {
     private let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
 
-
+    public init() {
+    }
+    
     public func property(propertyId:Int, completionHandler: Result<Property> -> Void) {
         let url = "\(baseURLString)\(propertyId)"
         

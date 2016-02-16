@@ -13,6 +13,9 @@ import Decodable
 public struct CitiesRepository {
     private let url = NSURL(string: "https://private-4219-practical.apiary-mock.com/cities/1530/properties/")!
     
+    public init() {
+    }
+    
     public func properties(completionHandler: Result<[Property]> -> Void) {
 
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in

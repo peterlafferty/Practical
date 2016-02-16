@@ -10,12 +10,12 @@ import Foundation
 import Decodable
 
 public struct Property {
-    let name:String
-    let id:String
-    let price:Double?
-    let currency:String?
-    let rating: Int?
-    let type:String
+    public let name:String
+    public let id:String
+    public let price:String?
+    public let currency:String?
+    public let rating: Int?
+    public let type:String
 }
 
 extension Property: Decodable {
