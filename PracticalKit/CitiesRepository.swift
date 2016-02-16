@@ -8,21 +8,26 @@
 
 import Foundation
 import Alamofire
-
+import Decodable
 
 public struct CitiesRepository {
     private let url = NSURL(string: "https://private-4219-practical.apiary-mock.com/cities/1530/properties/")!
     
-    public func properties(completionHandler: Result<[Int]> -> Void) {
+    public func properties(completionHandler: Result<[Property]> -> Void) {
 
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in
             switch response.result {
-            case .Success(let value):
-                print(value)
-                completionHandler(.Success([1]))
+            case .Success(let data):
+                
+                do {
+                    let properties = try [Property].decode(data => "properties")
+                    completionHandler(.Success(properties))
+                } catch {
+                    completionHandler(.Error(error))
+                }
+
             case .Failure(let error):
-                print(error)
-                completionHandler(.Success([1]))
+                completionHandler(.Error(error))
             }
             
         }

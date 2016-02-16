@@ -13,18 +13,21 @@ public struct PropertiesRepository {
     private let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
 
 
-    public func property(propertyId:Int, completionHandler: Result<[Int]> -> Void) {
+    public func property(propertyId:Int, completionHandler: Result<Property> -> Void) {
         let url = "\(baseURLString)\(propertyId)"
         
         
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in
             switch response.result {
-            case .Success(let value):
-                print(value)
-                        completionHandler(.Success([1]))
+            case .Success(let data):
+                do {
+                    let property = try Property.decode(data)
+                    completionHandler(.Success(property))
+                } catch {
+                    completionHandler(.Error(error))
+                }
             case .Failure(let error):
-                print(error)
-                        completionHandler(.Success([1]))
+                completionHandler(.Error(error))
             }
             
         }

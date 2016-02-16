@@ -26,15 +26,19 @@ class PracticalKitTests: XCTestCase {
         
         CitiesRepository().properties() { result in
             let error:ErrorType?
+            let properties:[Property]?
             
             switch result {
             case .Error(let e):
                 error = e
-            case .Success(_):
+                properties = nil
+            case .Success(let p):
                 error = nil
+                properties = p
             }
             
             XCTAssertNil(error)
+            XCTAssertNotNil(properties, "an array of properties should be returned")
             expectation.fulfill()
         }
         
@@ -46,17 +50,21 @@ class PracticalKitTests: XCTestCase {
     func testPropertiesRepository(){
         let expectation = expectationWithDescription("SingleProperty")
         
-        PropertiesRepository().property(101) { result in
+        PropertiesRepository().property(17219) { result in
             let error:ErrorType?
+            let property:Property?
             
             switch result {
             case .Error(let e):
                 error = e
-            case .Success(_):
+                property = nil
+            case .Success(let p):
                 error = nil
+                property = p
             }
             
             XCTAssertNil(error)
+            XCTAssertNotNil(property, "a single property should be returned")
             expectation.fulfill()
         }
         
