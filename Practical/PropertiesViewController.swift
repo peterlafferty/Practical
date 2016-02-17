@@ -11,7 +11,7 @@ import PracticalKit
 
 class MasterViewController: UITableViewController {
 
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: PropertyViewController? = nil
     var dataSource = PropertiesDataSource()
 
 
@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController {
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PropertyViewController
         }
         
         dataSource = PropertiesDataSource(completionHandler: {
@@ -42,14 +42,17 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let object = objects[indexPath.row] as! NSDate
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//            }
+        print("prepareForSegue")
+
+        if segue == .ShowProperty {
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                if let navigationController = segue.destinationViewController as? UINavigationController {
+                    if let controller = navigationController.topViewController as? PropertyViewController {
+                        controller.property = dataSource[indexPath]
+                    }
+                }
+            }
         }
     }
 

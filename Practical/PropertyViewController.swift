@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import PracticalKit
 
-class DetailViewController: UIViewController {
+class PropertyViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 
-    var detailItem: AnyObject? {
+    var property: Property? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
 
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
+        if let property = self.property {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+                label.text = property.name
             }
         }
     }

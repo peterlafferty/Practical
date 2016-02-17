@@ -12,6 +12,7 @@
 		100550E21C7399A300AD07C1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550E11C7399A300AD07C1 /* Image.swift */; };
 		100550E41C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100550E31C739D8400AD07C1 /* AlamofireImage.framework */; };
 		100550E51C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100550E31C739D8400AD07C1 /* AlamofireImage.framework */; };
+		1017A99A1C74910000002D7E /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1017A9991C74910000002D7E /* StoryboardSegues.swift */; };
 		1045825E1C733A6E00565C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825D1C733A6E00565C1F /* AppDelegate.swift */; };
 		104582601C733A6E00565C1F /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825F1C733A6E00565C1F /* PropertiesViewController.swift */; };
 		104582621C733A6E00565C1F /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104582611C733A6E00565C1F /* PropertyViewController.swift */; };
@@ -92,6 +93,7 @@
 		100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesDataSource.swift; sourceTree = "<group>"; };
 		100550E11C7399A300AD07C1 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		100550E31C739D8400AD07C1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		1017A9991C74910000002D7E /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		1045825A1C733A6E00565C1F /* Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1045825D1C733A6E00565C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1045825F1C733A6E00565C1F /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				1045826B1C733A6E00565C1F /* Info.plist */,
 				100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */,
 				100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */,
+				1017A9991C74910000002D7E /* StoryboardSegues.swift */,
 			);
 			path = Practical;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1017A99A1C74910000002D7E /* StoryboardSegues.swift in Sources */,
 				100550E01C7394FF00AD07C1 /* PropertiesDataSource.swift in Sources */,
 				104582621C733A6E00565C1F /* PropertyViewController.swift in Sources */,
 				104582601C733A6E00565C1F /* PropertiesViewController.swift in Sources */,
