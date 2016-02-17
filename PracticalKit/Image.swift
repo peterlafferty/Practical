@@ -12,9 +12,9 @@ import Decodable
 public struct Image {
     
     public enum Size: String {
-        case Original = "_base"
-        case Small = "_40"
-        case Large = "_80"
+        case Original = "base"
+        case Small = "s"
+        case Large = "l"
     }
     
     private let suffix: String

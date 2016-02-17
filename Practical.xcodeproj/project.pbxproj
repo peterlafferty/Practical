@@ -10,6 +10,8 @@
 		100550DE1C73865800AD07C1 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */; };
 		100550E01C7394FF00AD07C1 /* PropertiesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */; };
 		100550E21C7399A300AD07C1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100550E11C7399A300AD07C1 /* Image.swift */; };
+		100550E41C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100550E31C739D8400AD07C1 /* AlamofireImage.framework */; };
+		100550E51C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100550E31C739D8400AD07C1 /* AlamofireImage.framework */; };
 		1045825E1C733A6E00565C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825D1C733A6E00565C1F /* AppDelegate.swift */; };
 		104582601C733A6E00565C1F /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045825F1C733A6E00565C1F /* PropertiesViewController.swift */; };
 		104582621C733A6E00565C1F /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104582611C733A6E00565C1F /* PropertyViewController.swift */; };
@@ -89,6 +91,7 @@
 		100550DD1C73865800AD07C1 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		100550DF1C7394FF00AD07C1 /* PropertiesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesDataSource.swift; sourceTree = "<group>"; };
 		100550E11C7399A300AD07C1 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		100550E31C739D8400AD07C1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		1045825A1C733A6E00565C1F /* Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1045825D1C733A6E00565C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1045825F1C733A6E00565C1F /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				1045828F1C733BE900565C1F /* Decodable.framework in Frameworks */,
 				104582911C733CEA00565C1F /* Alamofire.framework in Frameworks */,
 				104582AD1C733DB300565C1F /* PracticalKit.framework in Frameworks */,
+				100550E41C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104582BA1C734FD300565C1F /* Alamofire.framework in Frameworks */,
+				100550E51C739D8400AD07C1 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +229,7 @@
 		104582921C733D1200565C1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				100550E31C739D8400AD07C1 /* AlamofireImage.framework */,
 				104582901C733CEA00565C1F /* Alamofire.framework */,
 				1045828E1C733BE900565C1F /* Decodable.framework */,
 			);
@@ -463,6 +469,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Decodable.framework/",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework/",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework/",
 			);
 			name = Carthage;
 			outputPaths = (

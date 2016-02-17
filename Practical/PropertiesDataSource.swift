@@ -8,6 +8,7 @@
 
 import UIKit
 import PracticalKit
+import AlamofireImage
 
 class PropertiesDataSource: NSObject {
     var properties = [Property]()
@@ -35,28 +36,12 @@ extension PropertiesDataSource: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("PropertyCell", forIndexPath: indexPath) as? PropertyTableViewCell else {
+        guard let cell = tableView.dequeueReusableCellWithIdentifier(PropertyTableViewCell.identifier, forIndexPath: indexPath) as? PropertyTableViewCell else {
             return UITableViewCell()
         }
         
         let property = properties[indexPath.row]
-        
-        cell.name.text = property.name
-        
-        if let rating = property.rating {
-            cell.rating.text = "\(rating)/100"
-        } else {
-            cell.rating.text = "No Rating"
-        }
-        
-        if let currency = property.currency, let price = property.price {
-            cell.price.text = "\(currency) \(price)"
-        } else {
-            cell.price.text = ""
-        }
-        cell.type.text = property.type
-        
-        
+        cell.property = property        
         
         return cell
     }

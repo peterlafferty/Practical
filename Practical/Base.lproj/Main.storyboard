@@ -137,10 +137,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="name" destination="Xha-CN-iEy" id="CNP-zl-6Cn"/>
-                                    <outlet property="price" destination="giq-hH-XOS" id="5rV-0E-1eP"/>
-                                    <outlet property="rating" destination="nKR-oh-yly" id="ppu-XV-6wO"/>
-                                    <outlet property="type" destination="gZS-qd-K8e" id="gT9-kn-yIw"/>
+                                    <outlet property="nameLabel" destination="Xha-CN-iEy" id="eJ3-ps-iED"/>
+                                    <outlet property="priceLabel" destination="giq-hH-XOS" id="KtQ-qB-WxK"/>
+                                    <outlet property="ratingLabel" destination="nKR-oh-yly" id="5Sr-db-0Vj"/>
+                                    <outlet property="thumbnailImage" destination="bzH-bF-lf5" id="wmf-jt-5zu"/>
+                                    <outlet property="typeLabel" destination="gZS-qd-K8e" id="1N3-ln-FpZ"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
