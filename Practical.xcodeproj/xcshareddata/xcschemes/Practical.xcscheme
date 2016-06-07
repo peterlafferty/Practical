@@ -38,6 +38,26 @@
                ReferencedContainer = "container:Practical.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1045826F1C733A6E00565C1F"
+               BuildableName = "PracticalTests.xctest"
+               BlueprintName = "PracticalTests"
+               ReferencedContainer = "container:Practical.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1045827A1C733A6E00565C1F"
+               BuildableName = "PracticalUITests.xctest"
+               BlueprintName = "PracticalUITests"
+               ReferencedContainer = "container:Practical.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

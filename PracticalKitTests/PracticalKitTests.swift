@@ -50,7 +50,7 @@ class PracticalKitTests: XCTestCase {
     func testPropertiesRepository(){
         let expectation = expectationWithDescription("SingleProperty")
         
-        PropertiesRepository().property(17219) { result in
+        PropertiesRepository().property("17219") { result in
             let error:ErrorType?
             let property:Property?
             

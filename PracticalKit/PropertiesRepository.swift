@@ -13,9 +13,11 @@ public struct PropertiesRepository {
     private let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
 
     public init() {
+        let bundle = NSBundle(identifier: "com.peterlafferty.PracticalKit")
+        print(bundle?.infoDictionary?["API"])
     }
     
-    public func property(propertyId:Int, completionHandler: Result<Property> -> Void) {
+    public func property(propertyId:String, completionHandler: Result<Property> -> Void) {
         let url = "\(baseURLString)\(propertyId)"
         
         
