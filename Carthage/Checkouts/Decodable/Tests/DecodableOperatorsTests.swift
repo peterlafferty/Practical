@@ -35,6 +35,17 @@ class DecodableOperatorsTests: XCTestCase {
         XCTAssertEqual(result, value)
     }
     
+    func testDecodeDictOfArraysSucess() {
+        // given
+        let key = "key"
+        let value: NSDictionary = ["list": [1, 2, 3]]
+        let dictionary: NSDictionary = [key: value]
+        // when
+        let result: [String: [Int]] = try! dictionary => key
+        // then
+        XCTAssertEqual(result, value)
+    }
+    
     func testDecodeNestedDictionarySuccess() {
         // given
         let key = "key"
@@ -52,7 +63,7 @@ class DecodableOperatorsTests: XCTestCase {
         let value: NSDictionary = ["aKey" : "value"]
         let dictionary: NSDictionary = [key: [key: value]]
         // when
-        let result: [String: AnyObject]? = try! dictionary => key => key
+        let result: [String: AnyObject]? = try! dictionary => key => key as! [String : AnyObject]
         // then
         XCTAssertEqual(result, value)
     }
