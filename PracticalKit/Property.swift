@@ -19,7 +19,6 @@ public struct Property {
     public let image:[Image]
     public let descriptionByProperty:String?
     public let descriptionByEditor:String?
-    public let recommends:Bool
 }
 
 extension Property: Decodable {
@@ -39,8 +38,7 @@ extension Property: Decodable {
             type: j => "type",
             image: j => "images",
             descriptionByProperty: try? j => "description",
-            descriptionByEditor: try? j => "hostelworldSays",
-            recommends: try j => "hostelworldRecommends"
+            descriptionByEditor: try? j => "hostelworldSays"
         )
     }
 }

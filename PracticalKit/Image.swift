@@ -21,7 +21,7 @@ public struct Image {
     fileprivate let prefix: String
     
     public subscript(size: Size) -> URL? {
-        return URL(string: prefix + size.rawValue + suffix)
+        return URL(string: prefix + "_" + size.rawValue + suffix)
     }
 }
 

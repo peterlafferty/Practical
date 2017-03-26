@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 public struct PropertiesRepository {
-    fileprivate let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
+    fileprivate let baseURLString = "https://private-84164-practical3.apiary-mock.com/properties/"
 
     public init() {
         //let bundle = Bundle(identifier: "com.peterlafferty.PracticalKit")

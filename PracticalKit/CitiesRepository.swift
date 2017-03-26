@@ -11,7 +11,7 @@ import Alamofire
 import Decodable
 
 public struct CitiesRepository {
-    fileprivate let url = URL(string: "https://private-4219-practical.apiary-mock.com/cities/1530/properties/")!
+    fileprivate let url = URL(string: "https://private-84164-practical3.apiary-mock.com/cities/1530/properties/")!
     
     public init() {
     }

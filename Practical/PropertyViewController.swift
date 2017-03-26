@@ -20,7 +20,6 @@ class PropertyViewController: UIViewController {
 
     var property: Property? {
         didSet {
-            print("Property set")
             self.configureView()
         }
     }
