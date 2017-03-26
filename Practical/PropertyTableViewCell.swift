@@ -45,7 +45,7 @@ class PropertyTableViewCell: UITableViewCell {
             
             
             if let image = p.image.first, let url = image[.Small] {
-                thumbnailImage.af_setImageWithURL(url)
+                thumbnailImage.af_setImage(withURL: url)
             }
         }
     }

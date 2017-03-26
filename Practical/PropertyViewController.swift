@@ -41,7 +41,7 @@ class PropertyViewController: UIViewController {
             
             if let imageView = imageView {
                 if let image = property.image.first, let url = image[.Large] {
-                    imageView.af_setImageWithURL(url)
+                    imageView.af_setImage(withURL: url)
                 }
             }
         }
@@ -62,9 +62,9 @@ class PropertyViewController: UIViewController {
         
         PropertiesRepository().property(property.id) { (result) -> Void in
             switch result {
-            case .Success(let p):
+            case .success(let p):
                 self.property = p
-            case .Error(_):
+            case .error(_):
                 ()
             }
         }

@@ -10,28 +10,28 @@ import Foundation
 import Alamofire
 
 public struct PropertiesRepository {
-    private let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
+    fileprivate let baseURLString = "https://private-4219-practical.apiary-mock.com/properties/"
 
     public init() {
-        let bundle = NSBundle(identifier: "com.peterlafferty.PracticalKit")
-        print(bundle?.infoDictionary?["API"])
+        //let bundle = Bundle(identifier: "com.peterlafferty.PracticalKit")
+        //print(bundle?.infoDictionary?["API"])
     }
     
-    public func property(propertyId:String, completionHandler: Result<Property> -> Void) {
+    public func property(_ propertyId:String, completionHandler: @escaping (Result<Property>) -> Void) {
         let url = "\(baseURLString)\(propertyId)"
         
         
-        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+        Alamofire.request(url).responseJSON { (response) -> Void in
             switch response.result {
-            case .Success(let data):
+            case .success(let data):
                 do {
                     let property = try Property.decode(data)
-                    completionHandler(.Success(property))
+                    completionHandler(.success(property))
                 } catch {
-                    completionHandler(.Error(error))
+                    completionHandler(.error(error))
                 }
-            case .Failure(let error):
-                completionHandler(.Error(error))
+            case .failure(let error):
+                completionHandler(.error(error))
             }
             
         }

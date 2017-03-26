@@ -14,20 +14,20 @@ class PropertiesDataSource: NSObject {
     var properties = [Property]()
     var selectedProperty: Property?
     
-    convenience init(completionHandler:(Void) -> (Void)) {
+    convenience init(completionHandler:@escaping (Void) -> (Void)) {
         self.init()
         CitiesRepository().properties { (result) -> Void in
             switch result {
-            case .Success(let properties):
+            case .success(let properties):
                 self.properties = properties
-            case .Error(_):
+            case .error(_):
                 ()
             }
             completionHandler()
         }
     }
     
-    func propertyAtIndex(indexPath: NSIndexPath) -> Property {
+    func propertyAtIndex(_ indexPath: IndexPath) -> Property {
         return properties[indexPath.row]
     }
     
@@ -37,7 +37,7 @@ class PropertiesDataSource: NSObject {
         }
     }
     
-    subscript(indexPath: NSIndexPath) -> Property {
+    subscript(indexPath: IndexPath) -> Property {
         get {
             return properties[indexPath.row]
         }
@@ -45,16 +45,16 @@ class PropertiesDataSource: NSObject {
 }
 
 extension PropertiesDataSource: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return properties.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(PropertyTableViewCell.identifier, forIndexPath: indexPath) as! PropertyTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyTableViewCell.identifier, for: indexPath) as! PropertyTableViewCell
         
         let property = properties[indexPath.row]
         cell.property = property        

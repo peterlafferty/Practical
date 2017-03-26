@@ -11,26 +11,26 @@ import Alamofire
 import Decodable
 
 public struct CitiesRepository {
-    private let url = NSURL(string: "https://private-4219-practical.apiary-mock.com/cities/1530/properties/")!
+    fileprivate let url = URL(string: "https://private-4219-practical.apiary-mock.com/cities/1530/properties/")!
     
     public init() {
     }
     
-    public func properties(completionHandler: Result<[Property]> -> Void) {
+    public func properties(_ completionHandler: @escaping (Result<[Property]>) -> Void) {
 
-        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+        Alamofire.request(url).responseJSON { (response) -> Void in
             switch response.result {
-            case .Success(let data):
+            case .success(let data):
                 
                 do {
                     let properties = try [Property].decode(data => "properties")
-                    completionHandler(.Success(properties))
+                    completionHandler(.success(properties))
                 } catch {
-                    completionHandler(.Error(error))
+                    completionHandler(.error(error))
                 }
 
-            case .Failure(let error):
-                completionHandler(.Error(error))
+            case .failure(let error):
+                completionHandler(.error(error))
             }
             
         }

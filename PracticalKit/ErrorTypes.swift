@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum PracticalKitError: ErrorType {
-    case NoResponse
+enum PracticalKitError: Error {
+    case noResponse
 }

@@ -22,7 +22,7 @@ class PracticalKitTests: XCTestCase {
     }
     
     func testCitiesRepostitory() {
-        let expectation = expectationWithDescription("PropertiesIncityRequest")
+        let expectation = self.expectation(description: "PropertiesIncityRequest")
         
         CitiesRepository().properties() { result in
             let error:ErrorType?
@@ -42,13 +42,13 @@ class PracticalKitTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectationsWithTimeout(10){ error in
+        waitForExpectations(timeout: 10){ error in
             XCTAssertNil(error)
         }
     }
     
     func testPropertiesRepository(){
-        let expectation = expectationWithDescription("SingleProperty")
+        let expectation = self.expectation(description: "SingleProperty")
         
         PropertiesRepository().property("17219") { result in
             let error:ErrorType?
@@ -68,7 +68,7 @@ class PracticalKitTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectationsWithTimeout(10){ error in
+        waitForExpectations(timeout: 10){ error in
             XCTAssertNil(error)
         }
         

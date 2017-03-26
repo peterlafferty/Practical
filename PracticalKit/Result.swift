@@ -10,6 +10,6 @@
 import Foundation
 
 public enum Result<T> {
-    case Success(T)
-    case Error(ErrorType)
+    case success(T)
+    case error(Error)
 }

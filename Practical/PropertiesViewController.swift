@@ -24,7 +24,7 @@ class MasterViewController: UITableViewController {
         }
         
         dataSource = PropertiesDataSource(completionHandler: {
-            dispatch_async(dispatch_get_main_queue(),{
+            DispatchQueue.main.async(execute: {
                 self.tableView.reloadData()
             })
             
@@ -41,13 +41,13 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Segues
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepareForSegue")
 
         if segue == .ShowProperty {
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                if let navigationController = segue.destinationViewController as? UINavigationController {
+                if let navigationController = segue.destination as? UINavigationController {
                     if let controller = navigationController.topViewController as? PropertyViewController {
                         controller.property = dataSource[indexPath]
                     }

@@ -17,16 +17,16 @@ public struct Image {
         case Large = "l"
     }
     
-    private let suffix: String
-    private let prefix: String
+    fileprivate let suffix: String
+    fileprivate let prefix: String
     
-    public subscript(size: Size) -> NSURL? {
-        return NSURL(string: prefix + size.rawValue + suffix)
+    public subscript(size: Size) -> URL? {
+        return URL(string: prefix + size.rawValue + suffix)
     }
 }
 
 extension Image: Decodable {
-    public static func decode(j: AnyObject) throws -> Image {
+    public static func decode(_ j: Any) throws -> Image {
         return try Image(
             suffix: j => "suffix",
             prefix: j => "prefix"
