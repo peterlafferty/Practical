@@ -26,9 +26,9 @@ extension Property: Decodable {
     public static func decode(_ j: Any) throws -> Property {
         
         var rating:Int? = try? j => "overallRating" => "overall"
-        //if rating == nil {
-        //    rating = try? j => "rating" => "overall"
-        //}
+        if rating == nil {
+            rating = try? j => "rating" => "overall" as Int
+        }
         
         return try Property(
             name: j => "name",
